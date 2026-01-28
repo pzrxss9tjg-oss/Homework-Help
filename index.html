@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Build the Bridge (Kid Edition)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <h1>Build the Bridge</h1>
+      <p class="subtitle">Fill the slots. We calculate <strong>left → right</strong>.</p>
+    </header>
+
+    <section class="goal card">
+      <div class="goal-row">
+        <div>
+          <div class="label">TARGET</div>
+          <div id="target" class="big">24</div>
+        </div>
+        <div>
+          <div class="label">YOUR RESULT</div>
+          <div id="result" class="big">—</div>
+        </div>
+      </div>
+
+      <div class="rules">
+        <span class="pill">Left-to-right only</span>
+        <span class="pill">No parentheses</span>
+        <span class="pill">Tap tiles to place</span>
+      </div>
+    </section>
+
+    <section class="bridge card">
+      <div class="label">BRIDGE</div>
+      <div id="slots" class="slots"></div>
+
+      <div class="actions">
+        <button id="undoBtn" class="btn secondary">Undo</button>
+        <button id="clearBtn" class="btn secondary">Clear</button>
+        <button id="checkBtn" class="btn primary">Check</button>
+      </div>
+
+      <div id="message" class="message" aria-live="polite"></div>
+    </section>
+
+    <section class="tiles card">
+      <div class="label">NUMBER TILES</div>
+      <div id="numbers" class="tile-row"></div>
+
+      <div class="label" style="margin-top:14px;">OPERATOR TILES</div>
+      <div id="ops" class="tile-row"></div>
+
+      <div class="actions" style="margin-top:16px;">
+        <button id="newBtn" class="btn">New Puzzle</button>
+        <label class="toggle">
+          <input id="mulToggle" type="checkbox" />
+          <span>Unlock × (harder)</span>
+        </label>
+      </div>
+    </section>
+
+    <footer class="footer">
+      Built with ❤️ + math. Tip: start with + and − only, then unlock ×.
+    </footer>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
